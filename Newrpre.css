@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Roboto&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+body{
+    animation: Bgchange 4s cubic-bezier(0.165, 0.84, 0.44, 1) 0s 1 ;
+    animation-fill-mode: forwards;
+    
+}/*********/
+@keyframes Bgchange {
+    0%{
+        background-color: black;
+    }
+    25%{
+        background-color: rgb(226, 45, 45);
+    }
+    
+    50%{
+        background-color: rgb(77, 130, 200);
+    }
+    
+    100%{
+        background-color: rgb(245, 238, 238);
+    }
+
+    
+}
+
+nav{
+    background-color: rgb(37, 9, 37);
+    color: white;
+    height: 65px;
+    font-size: 27px;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    padding: 0 12px;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav ul{
+    
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.gameContainer{ 
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    box-sizing: border-box;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3, 10vw);
+    font-family: 'ubuntu', sans-serif;
+    position: relative;
+    
+}
+
+.box{
+    /* offset-x | offset-y | blur-radius | color */
+    
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 8vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: heyo1;
+    animation: BRadius 1s ease 0.8s 1 ;
+    animation-fill-mode: backwards;
+    transition: transform  1s ease-in;
+    
+
+}
+@keyframes BRadius {
+    0%{
+        transform: rotate(0deg);
+        border-radius: 10px;
+
+    }
+    50%{
+        border-radius: 100px;
+        
+    }
+    100%{
+        border-radius: 0px;
+        transform: rotate(360deg);
+        
+        
+    }
+}
+
+.box:hover {
+    background-color: rgb(242, 234, 250);
+    box-shadow: 4px 5px 10px rgb(122, 142, 228);
+    /* transform: rotate(360deg); */
+    
+    
+}
+
+.info {
+    border: 2px solid #911d91;
+    font-size: 22px;
+
+}
+
+.gameInfo{
+    
+    padding: 0 34px;
+    font-family: 'Baloo Bhaina 2', cursive;
+}
+
+.gameInfo h1{
+    font-size: 2.5rem;
+}
+
+.imgbox img{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+.br-0{
+    border-right: 0;
+}
+
+.bl-0{
+    border-left: 0;
+}
+
+.bt-0{
+    border-top: 0;
+}
+
+.bb-0{
+    border-bottom: 0;
+}
+
+#reset {
+    color: rgb(255, 255, 255);
+    margin: 0 23px;
+    padding: 1px 18px;
+    background: #aa00ff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Baloo Bhaina 2';
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+.line{
+    background-color: black;
+    height: 3px;
+    width: 0;
+    position: absolute;
+    background-color: #911d91;
+    transition: width 1s ease-in-out;
+}
+
+@media screen and (max-width: 950px)
+{
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+    .gameInfo{
+        margin-top: 34px;
+    }
+    .gameInfo h1{
+        font-size: 1.5rem;
+    }
+    .container { 
+        grid-template-rows: repeat(4, 20vw);
+        grid-template-columns: repeat(4, 20vw);
+    }
+}
+
+
+.special{
+    display: flex;
+    justify-content: center;
+    /* animation: spin 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s infinite ; */
+}
+/* @keyframes spin {
+    from{
+        transform: rotate(0deg);
+        
+    }
+    to{
+        transform: rotate(360deg);
+    }
+    
+} */
+
+#logoimg{
+    margin: 0px 10px;
+    width: 50px;
+}
+
+#title{
+    margin: 10px 0px;
+}
+.Download{/*  Needs to be removed*/
+    border:  1px solid rgb(113, 163, 255);
+    border-radius: 4px;
+    position: absolute;
+    top: 189px;
+    left: 916px;
+    
+    background-color: #92a8f1;
+
+    font-weight: 100;
+    font-size: 15px;
+    margin: 10px 10px;
+    padding: 10px 15px;
+    width: 100px;
+}
+.Download:hover{
+    box-shadow: 2px 1px 20px rgb(241, 112, 26);
+}
+#Backg{ /*  Needs to be removed*/
+    position: absolute;
+    width: 200px;
+    background-color: rgb(0, 131, 131);
+}
